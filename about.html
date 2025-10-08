@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>关于淘狗 - 买卖二手上淘狗，taogou.com</title>
+  <meta name="description" content="了解淘狗团队与愿景，打造更可信赖的 C2C 二手交易平台。" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'tg-primary': '#FFD200',
+            'tg-primary-dark': '#FF8A00',
+            'tg-secondary': '#2B2B2B',
+            'tg-accent': '#FFF4B0',
+          },
+          fontFamily: {
+            'display': ['"SF Pro Display"', 'Inter', 'system-ui', 'sans-serif'],
+            'body': ['"SF Pro Text"', 'Inter', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-body antialiased">
+  <header class="bg-white/95 backdrop-blur border-b border-slate-200 sticky top-0 z-50">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 lg:px-8">
+      <a href="index.html" class="flex items-center gap-3 font-semibold text-lg text-slate-900">
+        <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-tg-primary text-tg-secondary text-xl">淘</span>
+        <span class="flex flex-col leading-tight">
+          <span>淘狗</span>
+          <span class="text-xs font-normal text-slate-500">taogou.com</span>
+        </span>
+      </a>
+      <div class="hidden items-center gap-8 text-sm font-medium text-slate-600 lg:flex">
+        <a href="index.html" class="hover:text-tg-primary-dark transition-colors">首页</a>
+        <a href="listings.html" class="hover:text-tg-primary-dark transition-colors">商品列表</a>
+        <a href="login.html" class="hover:text-tg-primary-dark transition-colors">登录</a>
+        <a href="about.html" class="text-tg-primary-dark">关于</a>
+        <a href="login.html" class="inline-flex items-center rounded-full bg-tg-primary px-4 py-2 text-tg-secondary shadow-sm shadow-tg-primary/20 transition hover:bg-[#FFC700]">加入我们</a>
+      </div>
+      <button id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" class="inline-flex flex-col items-end gap-1 rounded-md border border-slate-200 px-3 py-2 text-slate-700 transition hover:border-slate-300 hover:bg-slate-100 lg:hidden">
+        <span class="sr-only">打开主菜单</span>
+        <span class="block h-0.5 w-6 bg-slate-900"></span>
+        <span class="block h-0.5 w-5 bg-slate-900"></span>
+        <span class="block h-0.5 w-4 bg-slate-900"></span>
+      </button>
+    </nav>
+    <div id="mobile-nav" class="mx-auto hidden max-w-6xl flex-col gap-2 border-t border-slate-200 px-4 pb-4 text-sm font-medium text-slate-700 lg:hidden">
+      <a href="index.html" class="mt-4 rounded-lg px-3 py-2 hover:bg-slate-100">首页</a>
+      <a href="listings.html" class="rounded-lg px-3 py-2 hover:bg-slate-100">商品列表</a>
+      <a href="login.html" class="rounded-lg px-3 py-2 hover:bg-slate-100">登录</a>
+      <a href="about.html" class="rounded-lg px-3 py-2 text-tg-primary-dark hover:bg-slate-100">关于</a>
+      <a href="login.html" class="mt-2 inline-flex items-center justify-center rounded-full bg-tg-primary px-4 py-2 text-tg-secondary shadow-sm hover:bg-[#FFC700]">加入我们</a>
+    </div>
+  </header>
+
+  <main class="py-16 lg:py-24">
+    <section class="mx-auto max-w-6xl px-4 lg:grid lg:grid-cols-[1.1fr,0.9fr] lg:items-center lg:gap-16 lg:px-8">
+      <div class="space-y-6">
+        <span class="inline-flex items-center rounded-full bg-amber-50 px-3 py-1 text-xs font-medium text-amber-700">使命宣言</span>
+        <h1 class="font-display text-4xl font-bold leading-tight text-slate-900 sm:text-5xl">让闲置流动，让好物重生</h1>
+        <p class="text-lg text-slate-600">淘狗是一个聚焦二手好物的 C2C 平台，我们相信每件闲置都值得更好的归宿。通过科技驱动的信任体系与服务能力，我们帮助用户高效、安全地完成交易。</p>
+        <div class="grid gap-6 sm:grid-cols-2">
+          <div class="rounded-2xl bg-white p-6 shadow-sm shadow-slate-200/50">
+            <p class="text-sm font-semibold text-slate-500">成立时间</p>
+            <p class="mt-2 text-3xl font-bold text-tg-primary-dark">2022</p>
+            <p class="text-xs text-slate-500">总部位于上海，核心团队来自头部互联网平台。</p>
+          </div>
+          <div class="rounded-2xl bg-white p-6 shadow-sm shadow-slate-200/50">
+            <p class="text-sm font-semibold text-slate-500">用户规模</p>
+            <p class="mt-2 text-3xl font-bold text-tg-primary-dark">820 万+</p>
+            <p class="text-xs text-slate-500">覆盖 200+ 城市，日均撮合交易 3.6 万笔。</p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 lg:mt-0">
+        <div class="overflow-hidden rounded-3xl bg-white shadow-xl shadow-amber-100/60">
+          <img src="https://dummyimage.com/720x520/E0E7FF/312E81.png&text=Taogou+Team" alt="淘狗团队工作照占位图" class="w-full object-cover" />
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-20 bg-white py-16">
+      <div class="mx-auto max-w-6xl px-4 lg:px-8">
+        <h2 class="text-2xl font-semibold text-slate-900 sm:text-3xl">我们的核心价值</h2>
+        <p class="mt-3 max-w-2xl text-slate-600">淘狗不是宠物平台，而是专注于数码、家电、潮玩等多品类的闲置交易市场。我们以「可信赖」「高效率」「好体验」为核心，持续打磨产品。</p>
+        <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <article class="rounded-3xl border border-slate-100 bg-slate-50 p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-slate-900">可信赖的交易环境</h3>
+            <p class="mt-3 text-sm text-slate-600">引入多重身份认证、信用评分与资金托管流程，全面保障每一次买卖的安全与透明。</p>
+          </article>
+          <article class="rounded-3xl border border-slate-100 bg-slate-50 p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-slate-900">高效率的撮合引擎</h3>
+            <p class="mt-3 text-sm text-slate-600">通过算法推荐和即时消息系统，买卖双方可在数分钟内达成意向，大幅提升成交效率。</p>
+          </article>
+          <article class="rounded-3xl border border-slate-100 bg-slate-50 p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-slate-900">全流程的服务体验</h3>
+            <p class="mt-3 text-sm text-slate-600">提供质检、物流、售后等增值服务，帮助用户降低交易成本，享受与新购几乎一致的服务品质。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-20 mx-auto max-w-6xl px-4 lg:px-8">
+      <div class="grid gap-12 lg:grid-cols-[0.9fr,1.1fr] lg:items-start">
+        <div class="space-y-6">
+          <h2 class="text-2xl font-semibold text-slate-900 sm:text-3xl">发展里程碑</h2>
+          <p class="text-sm text-slate-600">从最初的二手数码社区到覆盖多品类的 C2C 交易平台，我们始终坚持以用户价值为中心。</p>
+          <ol class="space-y-4 border-l-2 border-amber-100 pl-6 text-sm text-slate-600">
+            <li>
+              <span class="block text-xs font-semibold uppercase tracking-wider text-amber-400">2022 Q1</span>
+              <p class="font-medium text-slate-900">完成种子轮融资，正式上线内测</p>
+              <p>首批邀请 5,000 名卖家，聚焦二手数码品类。</p>
+            </li>
+            <li>
+              <span class="block text-xs font-semibold uppercase tracking-wider text-amber-400">2022 Q4</span>
+              <p class="font-medium text-slate-900">上线担保支付与自营质检</p>
+              <p>推出 48 小时价保计划，建立淘狗专业质检团队。</p>
+            </li>
+            <li>
+              <span class="block text-xs font-semibold uppercase tracking-wider text-amber-400">2023 Q3</span>
+              <p class="font-medium text-slate-900">覆盖 20+ 品类，用户突破 500 万</p>
+              <p>发布 APP 版，接入即时客服与语音验货功能。</p>
+            </li>
+            <li>
+              <span class="block text-xs font-semibold uppercase tracking-wider text-amber-400">2024 Q2</span>
+              <p class="font-medium text-slate-900">推出淘狗信用体系</p>
+              <p>上线卖家保障计划，支持企业商家入驻与 API 对接。</p>
+            </li>
+          </ol>
+        </div>
+        <div class="rounded-3xl bg-white p-8 shadow-xl shadow-slate-200/50">
+          <h3 class="text-lg font-semibold text-slate-900">团队故事</h3>
+          <p class="mt-3 text-sm text-slate-600">淘狗由来自电商、金融风控与物流行业的成员共同创立。我们曾服务过上亿用户，了解二手交易中存在的痛点——价格不透明、沟通效率低、交易缺乏保障。淘狗希望用可信的产品与服务，降低闲置流转的门槛，让更多人享受循环经济带来的价值。</p>
+          <div class="mt-6 grid gap-4 sm:grid-cols-2">
+            <div class="rounded-2xl border border-slate-100 bg-slate-50 p-4 text-sm text-slate-600">
+              <h4 class="text-base font-semibold text-slate-900">产品与体验团队</h4>
+              <p class="mt-2 text-xs">负责产品设计、体验研究与社区运营，持续优化使用流程。</p>
+            </div>
+            <div class="rounded-2xl border border-slate-100 bg-slate-50 p-4 text-sm text-slate-600">
+              <h4 class="text-base font-semibold text-slate-900">信任与安全团队</h4>
+              <p class="mt-2 text-xs">聚焦风控、质检、客服体系，保障交易真实可靠。</p>
+            </div>
+            <div class="rounded-2xl border border-slate-100 bg-slate-50 p-4 text-sm text-slate-600">
+              <h4 class="text-base font-semibold text-slate-900">商业合作团队</h4>
+              <p class="mt-2 text-xs">连接品牌、渠道与服务伙伴，为用户提供增值服务。</p>
+            </div>
+            <div class="rounded-2xl border border-slate-100 bg-slate-50 p-4 text-sm text-slate-600">
+              <h4 class="text-base font-semibold text-slate-900">技术与数据团队</h4>
+              <p class="mt-2 text-xs">搭建高并发交易系统与智能推荐算法，为业务赋能。</p>
+            </div>
+          </div>
+          <div class="mt-8 rounded-2xl bg-amber-50 p-6 text-sm text-amber-800">
+            <p class="font-semibold">想加入淘狗？</p>
+            <p class="mt-2">我们正在寻找产品、运营、风控、数据等岗位的伙伴，一起打造更可信赖的 C2C 交易平台。发送简历至 <a href="mailto:hi@taogou.com" class="font-semibold text-tg-primary-dark">hi@taogou.com</a>。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white">
+    <div class="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-10 text-sm text-slate-500 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+      <p>© 2024 淘狗 taogou.com · 买卖二手，上淘狗。</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="listings.html" class="hover:text-tg-primary-dark">查看商品</a>
+        <a href="login.html" class="hover:text-tg-primary-dark">加入卖家</a>
+        <a href="index.html" class="hover:text-tg-primary-dark">返回首页</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const toggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('mobile-nav');
+      if (!toggle || !menu) {
+        return;
+      }
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', (!expanded).toString());
+        menu.classList.toggle('hidden');
+      });
+      menu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          if (toggle.getAttribute('aria-expanded') === 'true') {
+            toggle.setAttribute('aria-expanded', 'false');
+            menu.classList.add('hidden');
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
